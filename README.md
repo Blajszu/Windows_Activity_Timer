@@ -5,7 +5,7 @@ Windows Activity Timer is a Python application that tracks the time spent in dif
 ## 🖥 Screenshot  
 <div align=center>
 
-  ![Windows Activity Timer](https://github.com/user-attachments/assets/ea1d5d20-b81a-4637-be79-8d5107b67d6e)
+  ![Widget_Layout](https://github.com/user-attachments/assets/e7df6814-f356-4238-be49-dace3fdfc753)
 
 </div>
 
