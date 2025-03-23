@@ -1,6 +1,7 @@
 import tkinter as tk
 from PIL import Image, ImageTk, ImageDraw
 from custom_button import CustomButton
+from clock import Clock
 
 class CustomWindow(tk.Tk):
 
@@ -19,6 +20,7 @@ class CustomWindow(tk.Tk):
         self._setup_window()
         self._create_background()
         self._create_buttons()
+        self._create_clock()
         self._position_window()
         
     def _setup_window(self):
@@ -52,8 +54,7 @@ class CustomWindow(tk.Tk):
         self.canvas.create_image(0, 0, anchor="nw", image=self.bg_image)
         
     def _create_buttons(self):
-        """Create all necessary buttons"""
-        # Close button
+
         self.close_button = CustomButton(
             master=self,
             position=(8, 8),
@@ -82,6 +83,19 @@ class CustomWindow(tk.Tk):
 
         # TODO: Implement settings functionality
         print("Settings button clicked")
+
+    def _create_clock(self):
+
+        clock_x = 60
+        clock_y = 9
+        
+        self.clock = Clock(
+            master=self,
+            x=clock_x,
+            y=clock_y,
+            font=("Roboto Flex", 10, "bold"),
+            text_color="#FFFFFF"
+        )
         
     def _position_window(self):
 
