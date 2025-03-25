@@ -2,6 +2,7 @@ import tkinter as tk
 from PIL import Image, ImageTk, ImageDraw
 from custom_button import CustomButton
 from clock import Clock
+from timer.timer import Timer
 
 class CustomWindow(tk.Tk):
 
@@ -20,6 +21,7 @@ class CustomWindow(tk.Tk):
         self._setup_window()
         self._create_background()
         self._create_buttons()
+        self._create_timer()
         self._create_clock()
         self._position_window()
         
@@ -83,7 +85,22 @@ class CustomWindow(tk.Tk):
 
         # TODO: Implement settings functionality
         print("Settings button clicked")
+    
+    def _open_timer(self):
+        #TODO: Implement timer functionality
+        print("Timer button clicked")
 
+    def _create_timer(self):
+        self.timer = Timer(
+            master=self,
+            position=(120, 6),
+            size=(170, 170),
+            corner_radius=15,
+            background_color="#454545",
+            circle_color="#46DD76",
+            parent_bg="#323232"
+        )
+        
     def _create_clock(self):
 
         clock_x = 60
