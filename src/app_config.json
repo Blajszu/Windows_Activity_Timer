@@ -1,0 +1,238 @@
+{
+    "firefox.exe": {
+        "name": "Mozilla Firefox",
+        "icon_path": "C:/Program Files/Mozilla Firefox/firefox.exe"
+    },
+    "chrome.exe": {
+        "name": "Google Chrome",
+        "icon_path": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+    },
+    "msedge.exe": {
+        "name": "Microsoft Edge",
+        "icon_path": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+    },
+    "code.exe": {
+        "name": "Visual Studio Code",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Local/Programs/Microsoft VS Code/Code.exe"
+    },
+    "devenv.exe": {
+        "name": "Visual Studio",
+        "icon_path": "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/devenv.exe"
+    },
+    "spotify.exe": {
+        "name": "Spotify",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Roaming/Spotify/Spotify.exe"
+    },
+    "slack.exe": {
+        "name": "Slack",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Local/slack/slack.exe"
+    },
+    "discord.exe": {
+        "name": "Discord",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Local/Discord/app-*/Discord.exe"
+    },
+    "outlook.exe": {
+        "name": "Microsoft Outlook",
+        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/OUTLOOK.EXE"
+    },
+    "winword.exe": {
+        "name": "Microsoft Word",
+        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/WINWORD.EXE"
+    },
+    "excel.exe": {
+        "name": "Microsoft Excel",
+        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE"
+    },
+    "powerpnt.exe": {
+        "name": "Microsoft PowerPoint",
+        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/POWERPNT.EXE"
+    },
+    "notepad.exe": {
+        "name": "Notepad",
+        "icon_path": "C:/Windows/System32/notepad.exe"
+    },
+    "notepad++.exe": {
+        "name": "Notepad++",
+        "icon_path": "C:/Program Files/Notepad++/notepad++.exe"
+    },
+    "explorer.exe": {
+        "name": "File Explorer",
+        "icon_path": "explorer.exe"
+    },
+    "teams.exe": {
+        "name": "Microsoft Teams",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Local/Microsoft/Teams/current/Teams.exe"
+    },
+    "whatsapp.exe": {
+        "name": "WhatsApp",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Local/WhatsApp/WhatsApp.exe"
+    },
+    "telegram.exe": {
+        "name": "Telegram",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Roaming/Telegram Desktop/Telegram.exe"
+    },
+    "photoshop.exe": {
+        "name": "Adobe Photoshop",
+        "icon_path": "C:/Program Files/Adobe/Adobe Photoshop */Photoshop.exe"
+    },
+    "illustrator.exe": {
+        "name": "Adobe Illustrator",
+        "icon_path": "C:/Program Files/Adobe/Adobe Illustrator */Support Files/Contents/Windows/Illustrator.exe"
+    },
+    "acrobat.exe": {
+        "name": "Adobe Acrobat",
+        "icon_path": "C:/Program Files/Adobe/Acrobat DC/Acrobat/Acrobat.exe"
+    },
+    "idea64.exe": {
+        "name": "IntelliJ IDEA",
+        "icon_path": "C:/Program Files/JetBrains/IntelliJ IDEA */bin/idea64.exe"
+    },
+    "pycharm64.exe": {
+        "name": "PyCharm",
+        "icon_path": "C:/Program Files/JetBrains/PyCharm */bin/pycharm64.exe"
+    },
+    "clion64.exe": {
+        "name": "CLion",
+        "icon_path": "C:/Program Files/JetBrains/CLion */bin/clion64.exe"
+    },
+    "webstorm64.exe": {
+        "name": "WebStorm",
+        "icon_path": "C:/Program Files/JetBrains/WebStorm */bin/webstorm64.exe"
+    },
+    "goland64.exe": {
+        "name": "GoLand",
+        "icon_path": "C:/Program Files/JetBrains/GoLand */bin/goland64.exe"
+    },
+    "rider64.exe": {
+        "name": "Rider",
+        "icon_path": "C:/Program Files/JetBrains/JetBrains Rider */bin/rider64.exe"
+    },
+    "postman.exe": {
+        "name": "Postman",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Local/Postman/Postman.exe"
+    },
+    "gitkraken.exe": {
+        "name": "GitKraken",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Local/gitkraken/Update.exe"
+    },
+    "sublime_text.exe": {
+        "name": "Sublime Text",
+        "icon_path": "C:/Program Files/Sublime Text/sublime_text.exe"
+    },
+    "atom.exe": {
+        "name": "Atom",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Local/atom/atom.exe"
+    },
+    "vncviewer.exe": {
+        "name": "VNC Viewer",
+        "icon_path": "C:/Program Files/RealVNC/VNC Viewer/vncviewer.exe"
+    },
+    "zoom.exe": {
+        "name": "Zoom",
+        "icon_path": "C:/Users/{USERNAME}/AppData/Roaming/Zoom/bin/Zoom.exe"
+    },
+    "skype.exe": {
+        "name": "Skype",
+        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/LYNC.EXE"
+    },
+    "steam.exe": {
+        "name": "Steam",
+        "icon_path": "C:/Program Files (x86)/Steam/steam.exe"
+    },
+    "epicgameslauncher.exe": {
+        "name": "Epic Games Launcher",
+        "icon_path": "C:/Program Files (x86)/Epic Games/Launcher/Portal/Binaries/Win32/EpicGamesLauncher.exe"
+    },
+    "origin.exe": {
+        "name": "Origin",
+        "icon_path": "C:/Program Files (x86)/Origin/Origin.exe"
+    },
+    "uplay.exe": {
+        "name": "Ubisoft Connect",
+        "icon_path": "C:/Program Files (x86)/Ubisoft/Ubisoft Game Launcher/Uplay.exe"
+    },
+    "battle.net.exe": {
+        "name": "Battle.net",
+        "icon_path": "C:/Program Files (x86)/Battle.net/Battle.net Launcher.exe"
+    },
+    "javaw.exe": {
+        "name": "Java Application",
+        "icon_path": "C:/Program Files/Java/jre*/bin/javaw.exe"
+    },
+    "python.exe": {
+        "name": "Python",
+        "icon_path": "C:/Python*/python.exe"
+    },
+    "node.exe": {
+        "name": "Node.js",
+        "icon_path": "C:/Program Files/nodejs/node.exe"
+    },
+    "docker.exe": {
+        "name": "Docker Desktop",
+        "icon_path": "C:/Program Files/Docker/Docker/Docker Desktop.exe"
+    },
+    "virtualbox.exe": {
+        "name": "Oracle VM VirtualBox",
+        "icon_path": "C:/Program Files/Oracle/VirtualBox/VirtualBox.exe"
+    },
+    "vmware.exe": {
+        "name": "VMware Workstation",
+        "icon_path": "C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe"
+    },
+    "wireshark.exe": {
+        "name": "Wireshark",
+        "icon_path": "C:/Program Files/Wireshark/wireshark.exe"
+    },
+    "putty.exe": {
+        "name": "PuTTY",
+        "icon_path": "C:/Program Files/PuTTY/putty.exe"
+    },
+    "filezilla.exe": {
+        "name": "FileZilla",
+        "icon_path": "C:/Program Files/FileZilla FTP Client/filezilla.exe"
+    },
+    "winamp.exe": {
+        "name": "Winamp",
+        "icon_path": "C:/Program Files (x86)/Winamp/winamp.exe"
+    },
+    "vlc.exe": {
+        "name": "VLC Media Player",
+        "icon_path": "C:/Program Files/VideoLAN/VLC/vlc.exe"
+    },
+    "itunes.exe": {
+        "name": "iTunes",
+        "icon_path": "C:/Program Files/iTunes/iTunes.exe"
+    },
+    "obs64.exe": {
+        "name": "OBS Studio",
+        "icon_path": "C:/Program Files/obs-studio/bin/64bit/obs64.exe"
+    },
+    "photos.exe": {
+        "name": "Microsoft Photos",
+        "icon_path": "C:/Program Files/WindowsApps/Microsoft.Windows.Photos_*/PhotosApp.exe"
+    },
+    "calculator.exe": {
+        "name": "Calculator",
+        "icon_path": "C:/Windows/System32/calc.exe"
+    },
+    "cmd.exe": {
+        "name": "Command Prompt",
+        "icon_path": "C:/Windows/System32/cmd.exe"
+    },
+    "powershell.exe": {
+        "name": "Windows PowerShell",
+        "icon_path": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+    },
+    "regedit.exe": {
+        "name": "Registry Editor",
+        "icon_path": "C:/Windows/regedit.exe"
+    },
+    "taskmgr.exe": {
+        "name": "Task Manager",
+        "icon_path": "C:/Windows/System32/Taskmgr.exe"
+    },
+    "control.exe": {
+        "name": "Control Panel",
+        "icon_path": "C:/Windows/System32/control.exe"
+    }
+}

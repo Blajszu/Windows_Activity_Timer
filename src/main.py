@@ -3,6 +3,7 @@ from PIL import Image, ImageTk, ImageDraw
 from custom_button import CustomButton
 from clock import Clock
 from timer.timer import Timer
+from activity.activity import TopAppsWidget
 
 class CustomWindow(tk.Tk):
 
@@ -23,6 +24,7 @@ class CustomWindow(tk.Tk):
         self._create_buttons()
         self._create_timer()
         self._create_clock()
+        self._create_activity()
         self._position_window()
         
     def _setup_window(self):
@@ -85,10 +87,6 @@ class CustomWindow(tk.Tk):
 
         # TODO: Implement settings functionality
         print("Settings button clicked")
-    
-    def _open_timer(self):
-        #TODO: Implement timer functionality
-        print("Timer button clicked")
 
     def _create_timer(self):
         self.timer = Timer(
@@ -112,6 +110,13 @@ class CustomWindow(tk.Tk):
             y=clock_y,
             font=("Roboto Flex", 10, "bold"),
             text_color="#FFFFFF"
+        )
+
+    def _create_activity(self):
+        self.top_apps_widget = TopAppsWidget(
+            master=self,
+            position=(6, 40),
+            size=(105, 135)
         )
         
     def _position_window(self):
