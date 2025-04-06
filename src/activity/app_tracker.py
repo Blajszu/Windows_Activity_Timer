@@ -25,11 +25,11 @@ class AppTracker:
         default_config = {
             "firefox.exe": {
                 "name": "Mozilla Firefox",
-                "icon_path": "C:/Program Files/Mozilla Firefox/firefox.exe"
+                "custom_icon_path": "icons/firefox.png"
             },
             "chrome.exe": {
                 "name": "Google Chrome",
-                "icon_path": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+                "custom_icon_path": "icons/chrome.png"
             },
         }
         
@@ -80,76 +80,29 @@ class AppTracker:
         return ImageTk.PhotoImage(img)
 
     def get_icon(self, exe_name, icon_size=(16, 16)):
-        """Pobiera ikonę dla aplikacji z pliku EXE lub używa domyślnej"""
+        """Pobiera ikonę dla aplikacji z pliku obrazu lub używa domyślnej"""
         if exe_name in self.icon_cache:
             return self.icon_cache[exe_name]
 
-        icon = None
         app_config = self.app_config.get(exe_name.lower(), {})
-
-        if 'icon_path' in app_config:
-            icon_path = app_config['icon_path'].replace("{USERNAME}", os.getenv("USERNAME"))
-
-            # Obsługa wildcard (*)
-            if '*' in icon_path:
-                matches = glob.glob(icon_path)
-                if matches:
-                    icon_path = matches[0]
-
-            try:
-                if os.path.exists(icon_path):
-                    large_icons, small_icons = win32gui.ExtractIconEx(icon_path, 0)
-
-                    if not large_icons and not small_icons:
-                        print(f"Nie znaleziono ikon w {icon_path}")
-                        return self.create_default_icon(icon_size, exe_name)
-
-                    print(f"Znaleziono {len(large_icons)} dużych ikon, {len(small_icons)} małych ikon w {icon_path}")
-
-                    hicon = large_icons[0] if large_icons else small_icons[0]
-
-                    # 🔹 Stworzenie własnego DC i bitmapy
-                    hdc_screen = win32gui.GetDC(0)
-                    hdc_mem = win32ui.CreateDCFromHandle(hdc_screen)
-                    hdc_mem.SetMapMode(win32con.MM_TEXT)
-
-                    hbmp = win32ui.CreateBitmap()
-                    hbmp.CreateCompatibleBitmap(hdc_mem, icon_size[0], icon_size[1])
-
-                    # 🔹 Użycie SelectObject na bitmapie
-                    hdc_mem.SelectObject(hbmp)
-                    win32gui.DrawIconEx(hdc_mem.GetSafeHdc(), 0, 0, hicon, icon_size[0], icon_size[1], 0, None, win32con.DI_NORMAL)
-
-                    # 🔹 Pobranie bitmapy
-                    bmpinfo = hbmp.GetInfo()
-                    bmpstr = hbmp.GetBitmapBits(True)
-
-                    img = Image.frombuffer('RGBA', (bmpinfo['bmWidth'], bmpinfo['bmHeight']), bmpstr, 'raw', 'BGRA', 0, 1)
+        
+        # Sprawdź najpierw custom_icon_path
+        if 'custom_icon_path' in app_config:
+            icon_path = app_config['custom_icon_path']
+            if os.path.exists(icon_path):
+                try:
+                    img = Image.open(icon_path)
                     img = img.resize(icon_size, Image.Resampling.LANCZOS)
-
-                    # 🔹 Konwersja do ImageTk
                     icon = ImageTk.PhotoImage(img)
-
-                    # 🔹 Zwolnienie zasobów
-                    win32gui.DestroyIcon(hicon)
-                    hdc_mem.DeleteDC()
-                    win32gui.ReleaseDC(0, hdc_screen)
-                    hbmp.DeleteObject()
-
-                    # Cache'owanie ikony
                     self.icon_cache[exe_name] = icon
                     return icon
-
-            except Exception as e:
-                print(f"Błąd ładowania ikony z {icon_path}: {e}")
-
-        # Jeśli nie udało się załadować ikony, użyj domyślnej
-        print(f"Używam domyślnej ikony dla {exe_name}")
+                except Exception as e:
+                    print(f"Błąd wczytywania niestandardowej ikony {icon_path}: {e}")
+        
+        # Użyj domyślnej ikony
         icon = self.create_default_icon(icon_size, exe_name)
         self.icon_cache[exe_name] = icon
         return icon
-
-
 
     def get_active_window(self):
         window = win32gui.GetForegroundWindow()

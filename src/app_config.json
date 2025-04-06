@@ -1,238 +1,214 @@
 {
     "firefox.exe": {
         "name": "Mozilla Firefox",
-        "icon_path": "C:/Program Files/Mozilla Firefox/firefox.exe"
+        "custom_icon_path": "./icons/firefox.png"
     },
     "chrome.exe": {
         "name": "Google Chrome",
-        "icon_path": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+        "custom_icon_path": "icons/chrome.png"
     },
     "msedge.exe": {
         "name": "Microsoft Edge",
-        "icon_path": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
+        "custom_icon_path": "icons/msedge.png"
     },
     "code.exe": {
         "name": "Visual Studio Code",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Local/Programs/Microsoft VS Code/Code.exe"
+        "custom_icon_path": "icons/code.png"
     },
     "devenv.exe": {
         "name": "Visual Studio",
-        "icon_path": "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/devenv.exe"
+        "custom_icon_path": "icons/devenv.png"
     },
     "spotify.exe": {
         "name": "Spotify",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Roaming/Spotify/Spotify.exe"
+        "custom_icon_path": "icons/spotify.png"
     },
     "slack.exe": {
         "name": "Slack",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Local/slack/slack.exe"
+        "custom_icon_path": "icons/slack.png"
     },
     "discord.exe": {
         "name": "Discord",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Local/Discord/app-*/Discord.exe"
-    },
-    "outlook.exe": {
-        "name": "Microsoft Outlook",
-        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/OUTLOOK.EXE"
+        "custom_icon_path": "icons/discord.png"
     },
     "winword.exe": {
         "name": "Microsoft Word",
-        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/WINWORD.EXE"
+        "custom_icon_path": "icons/winword.png"
     },
     "excel.exe": {
         "name": "Microsoft Excel",
-        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/EXCEL.EXE"
+        "custom_icon_path": "icons/excel.png"
     },
     "powerpnt.exe": {
         "name": "Microsoft PowerPoint",
-        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/POWERPNT.EXE"
+        "custom_icon_path": "icons/powerpnt.png"
     },
     "notepad.exe": {
         "name": "Notepad",
-        "icon_path": "C:/Windows/System32/notepad.exe"
+        "custom_icon_path": "icons/notepad.png"
     },
     "notepad++.exe": {
         "name": "Notepad++",
-        "icon_path": "C:/Program Files/Notepad++/notepad++.exe"
+        "custom_icon_path": "icons/notepad++.png"
     },
     "explorer.exe": {
         "name": "File Explorer",
-        "icon_path": "explorer.exe"
+        "custom_icon_path": "icons/explorer.png"
     },
     "teams.exe": {
         "name": "Microsoft Teams",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Local/Microsoft/Teams/current/Teams.exe"
-    },
-    "whatsapp.exe": {
-        "name": "WhatsApp",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Local/WhatsApp/WhatsApp.exe"
-    },
-    "telegram.exe": {
-        "name": "Telegram",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Roaming/Telegram Desktop/Telegram.exe"
+        "custom_icon_path": "icons/teams.png"
     },
     "photoshop.exe": {
         "name": "Adobe Photoshop",
-        "icon_path": "C:/Program Files/Adobe/Adobe Photoshop */Photoshop.exe"
+        "custom_icon_path": "icons/photoshop.png"
     },
     "illustrator.exe": {
         "name": "Adobe Illustrator",
-        "icon_path": "C:/Program Files/Adobe/Adobe Illustrator */Support Files/Contents/Windows/Illustrator.exe"
+        "custom_icon_path": "icons/illustrator.png"
     },
     "acrobat.exe": {
         "name": "Adobe Acrobat",
-        "icon_path": "C:/Program Files/Adobe/Acrobat DC/Acrobat/Acrobat.exe"
+        "custom_icon_path": "icons/acrobat.png"
     },
     "idea64.exe": {
         "name": "IntelliJ IDEA",
-        "icon_path": "C:/Program Files/JetBrains/IntelliJ IDEA */bin/idea64.exe"
+        "custom_icon_path": "icons/idea64.png"
     },
     "pycharm64.exe": {
         "name": "PyCharm",
-        "icon_path": "C:/Program Files/JetBrains/PyCharm */bin/pycharm64.exe"
+        "custom_icon_path": "icons/pycharm64.png"
     },
     "clion64.exe": {
         "name": "CLion",
-        "icon_path": "C:/Program Files/JetBrains/CLion */bin/clion64.exe"
+        "custom_icon_path": "icons/clion64.png"
     },
     "webstorm64.exe": {
         "name": "WebStorm",
-        "icon_path": "C:/Program Files/JetBrains/WebStorm */bin/webstorm64.exe"
-    },
-    "goland64.exe": {
-        "name": "GoLand",
-        "icon_path": "C:/Program Files/JetBrains/GoLand */bin/goland64.exe"
-    },
-    "rider64.exe": {
-        "name": "Rider",
-        "icon_path": "C:/Program Files/JetBrains/JetBrains Rider */bin/rider64.exe"
+        "custom_icon_path": "icons/webstorm64.png"
     },
     "postman.exe": {
         "name": "Postman",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Local/Postman/Postman.exe"
+        "custom_icon_path": "icons/postman.png"
     },
     "gitkraken.exe": {
         "name": "GitKraken",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Local/gitkraken/Update.exe"
+        "custom_icon_path": "icons/gitkraken.png"
     },
     "sublime_text.exe": {
         "name": "Sublime Text",
-        "icon_path": "C:/Program Files/Sublime Text/sublime_text.exe"
+        "custom_icon_path": "icons/sublime_text.png"
     },
     "atom.exe": {
         "name": "Atom",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Local/atom/atom.exe"
+        "custom_icon_path": "icons/atom.png"
     },
     "vncviewer.exe": {
         "name": "VNC Viewer",
-        "icon_path": "C:/Program Files/RealVNC/VNC Viewer/vncviewer.exe"
+        "custom_icon_path": "icons/vncviewer.png"
     },
     "zoom.exe": {
         "name": "Zoom",
-        "icon_path": "C:/Users/{USERNAME}/AppData/Roaming/Zoom/bin/Zoom.exe"
-    },
-    "skype.exe": {
-        "name": "Skype",
-        "icon_path": "C:/Program Files/Microsoft Office/root/Office16/LYNC.EXE"
+        "custom_icon_path": "icons/zoom.png"
     },
     "steam.exe": {
         "name": "Steam",
-        "icon_path": "C:/Program Files (x86)/Steam/steam.exe"
+        "custom_icon_path": "icons/steam.png"
     },
     "epicgameslauncher.exe": {
         "name": "Epic Games Launcher",
-        "icon_path": "C:/Program Files (x86)/Epic Games/Launcher/Portal/Binaries/Win32/EpicGamesLauncher.exe"
+        "custom_icon_path": "icons/epicgameslauncher.png"
     },
     "origin.exe": {
         "name": "Origin",
-        "icon_path": "C:/Program Files (x86)/Origin/Origin.exe"
+        "custom_icon_path": "icons/origin.png"
     },
     "uplay.exe": {
         "name": "Ubisoft Connect",
-        "icon_path": "C:/Program Files (x86)/Ubisoft/Ubisoft Game Launcher/Uplay.exe"
+        "custom_icon_path": "icons/uplay.png"
     },
     "battle.net.exe": {
         "name": "Battle.net",
-        "icon_path": "C:/Program Files (x86)/Battle.net/Battle.net Launcher.exe"
+        "custom_icon_path": "icons/battle.net.png"
     },
     "javaw.exe": {
         "name": "Java Application",
-        "icon_path": "C:/Program Files/Java/jre*/bin/javaw.exe"
+        "custom_icon_path": "icons/javaw.png"
     },
     "python.exe": {
         "name": "Python",
-        "icon_path": "C:/Python*/python.exe"
+        "custom_icon_path": "icons/python.png"
     },
     "node.exe": {
         "name": "Node.js",
-        "icon_path": "C:/Program Files/nodejs/node.exe"
+        "custom_icon_path": "icons/node.png"
     },
     "docker.exe": {
         "name": "Docker Desktop",
-        "icon_path": "C:/Program Files/Docker/Docker/Docker Desktop.exe"
+        "custom_icon_path": "icons/docker.png"
     },
     "virtualbox.exe": {
         "name": "Oracle VM VirtualBox",
-        "icon_path": "C:/Program Files/Oracle/VirtualBox/VirtualBox.exe"
+        "custom_icon_path": "icons/virtualbox.png"
     },
     "vmware.exe": {
         "name": "VMware Workstation",
-        "icon_path": "C:/Program Files (x86)/VMware/VMware Workstation/vmware.exe"
+        "custom_icon_path": "icons/vmware.png"
     },
     "wireshark.exe": {
         "name": "Wireshark",
-        "icon_path": "C:/Program Files/Wireshark/wireshark.exe"
+        "custom_icon_path": "icons/wireshark.png"
     },
     "putty.exe": {
         "name": "PuTTY",
-        "icon_path": "C:/Program Files/PuTTY/putty.exe"
+        "custom_icon_path": "icons/putty.png"
     },
     "filezilla.exe": {
         "name": "FileZilla",
-        "icon_path": "C:/Program Files/FileZilla FTP Client/filezilla.exe"
+        "custom_icon_path": "icons/filezilla.png"
     },
     "winamp.exe": {
         "name": "Winamp",
-        "icon_path": "C:/Program Files (x86)/Winamp/winamp.exe"
+        "custom_icon_path": "icons/winamp.png"
     },
     "vlc.exe": {
         "name": "VLC Media Player",
-        "icon_path": "C:/Program Files/VideoLAN/VLC/vlc.exe"
+        "custom_icon_path": "icons/vlc.png"
     },
     "itunes.exe": {
         "name": "iTunes",
-        "icon_path": "C:/Program Files/iTunes/iTunes.exe"
+        "custom_icon_path": "icons/itunes.png"
     },
     "obs64.exe": {
         "name": "OBS Studio",
-        "icon_path": "C:/Program Files/obs-studio/bin/64bit/obs64.exe"
+        "custom_icon_path": "icons/obs64.png"
     },
     "photos.exe": {
         "name": "Microsoft Photos",
-        "icon_path": "C:/Program Files/WindowsApps/Microsoft.Windows.Photos_*/PhotosApp.exe"
+        "custom_icon_path": "icons/photos.png"
     },
     "calculator.exe": {
         "name": "Calculator",
-        "icon_path": "C:/Windows/System32/calc.exe"
+        "custom_icon_path": "icons/calculator.png"
     },
     "cmd.exe": {
         "name": "Command Prompt",
-        "icon_path": "C:/Windows/System32/cmd.exe"
+        "custom_icon_path": "icons/cmd.png"
     },
     "powershell.exe": {
         "name": "Windows PowerShell",
-        "icon_path": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+        "custom_icon_path": "icons/powershell.png"
     },
     "regedit.exe": {
         "name": "Registry Editor",
-        "icon_path": "C:/Windows/regedit.exe"
+        "custom_icon_path": "icons/regedit.png"
     },
     "taskmgr.exe": {
         "name": "Task Manager",
-        "icon_path": "C:/Windows/System32/Taskmgr.exe"
+        "custom_icon_path": "icons/taskmgr.png"
     },
     "control.exe": {
         "name": "Control Panel",
-        "icon_path": "C:/Windows/System32/control.exe"
+        "custom_icon_path": "icons/control.png"
     }
 }
