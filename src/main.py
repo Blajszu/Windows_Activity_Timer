@@ -35,9 +35,6 @@ class CustomWindow(tk.Tk):
         self.overrideredirect(True)
         self.wm_attributes("-transparentcolor", self.transparent_color)
         
-        self.bind('<Button-1>', self._start_drag)
-        self.bind('<B1-Motion>', self._on_drag)
-        
     def _create_background(self):
 
         image = Image.new("RGBA", (self.window_width, self.window_height), (0, 0, 0, 0))
@@ -58,6 +55,8 @@ class CustomWindow(tk.Tk):
         )
         self.canvas.pack(fill="both", expand=True)
         self.canvas.create_image(0, 0, anchor="nw", image=self.bg_image)
+        self.canvas.bind('<Button-1>', self._start_drag)
+        self.canvas.bind('<B1-Motion>', self._on_drag)
         
     def _create_buttons(self):
 
