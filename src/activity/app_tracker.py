@@ -5,11 +5,8 @@ import os
 import json
 from collections import defaultdict
 import random
-import glob
 import win32gui
 import win32process
-import win32ui
-import win32con
 
 class AppTracker:
     def __init__(self, config_file="app_config.json"):

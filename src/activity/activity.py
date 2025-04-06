@@ -1,6 +1,5 @@
 import tkinter as tk
 from PIL import Image, ImageTk, ImageDraw
-from tkinter import font as tkfont
 from activity.app_tracker import AppTracker
 
 class TopAppsWidget(tk.Label):
