@@ -4,6 +4,8 @@ from custom_button import CustomButton
 from clock import Clock
 from timer.timer import Timer
 from activity.activity import TopAppsWidget
+import os
+import platform
 
 class CustomWindow(tk.Tk):
 
@@ -85,8 +87,11 @@ class CustomWindow(tk.Tk):
     
     def _open_settings(self):
 
-        # TODO: Implement settings functionality
-        print("Settings button clicked")
+            BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+            config_path = os.path.join(BASE_DIR, 'app_config.json')
+
+            if platform.system() == 'Windows':
+                os.startfile(config_path)
 
     def _create_timer(self):
         self.timer = Timer(
