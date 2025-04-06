@@ -48,7 +48,6 @@ class Timer(tk.Label):
             fill=self.background_color
         )
         
-        # Dodanie obracanego koła
         circle_overlay = Image.open(self.circle_image_path)
         circle_overlay = circle_overlay.resize((self.width - 10, self.height - 10), Image.LANCZOS)
         rotated_circle = circle_overlay.rotate(self.rotation_angle, resample=Image.BICUBIC)
@@ -140,7 +139,6 @@ class Timer(tk.Label):
         
         self.current_button = container
 
-    # Reszta metod pozostaje bez zmian
     def switch_to_small_circle(self):
         self.circle_image_path = "src/img/timer_small_circle.png"
         self.create_timer_image()

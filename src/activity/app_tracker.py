@@ -18,7 +18,7 @@ class AppTracker:
         self.icon_cache = {}
 
     def load_config(self):
-        """Ładuje konfigurację aplikacji z pliku JSON"""
+
         default_config = {
             "firefox.exe": {
                 "name": "Mozilla Firefox",
@@ -43,20 +43,16 @@ class AppTracker:
             return default_config
 
     def create_default_icon(self, size=(16, 16), name="unknown"):
-        """Tworzy domyślną ikonę z pierwszą literą nazwy aplikacji"""
         img = Image.new('RGBA', (size[0] + 2, size[1] + 2), (1, 1, 0, 0))
         draw = ImageDraw.Draw(img)
         
-        # Tło - kolorowy okrąg
         bg_color = random.randint(50, 200), random.randint(50, 200), random.randint(50, 200)
         draw.ellipse([(0, 0), size], fill=bg_color)
         
-        # Tekst - pierwsza litera nazwy
         if name:
             letter = name[0].upper() if name else "?"
             font = None
             
-            # Spróbuj załadować czcionkę
             try:
                 font = ImageFont.truetype("arial.ttf", size=int(size[0]*0.6))
             except:
@@ -66,7 +62,6 @@ class AppTracker:
                     pass
             
             if font:
-                # Nowy sposób obliczania rozmiaru tekstu w Pillow >= 8.0.0
                 left, top, right, bottom = draw.textbbox((0, 0), letter, font=font)
                 text_width = right - left
                 text_height = bottom - top
@@ -83,7 +78,6 @@ class AppTracker:
 
         app_config = self.app_config.get(exe_name.lower(), {})
         
-        # Sprawdź najpierw custom_icon_path
         if 'custom_icon_path' in app_config:
             icon_path = app_config['custom_icon_path']
             if os.path.exists(icon_path):
@@ -96,7 +90,6 @@ class AppTracker:
                 except Exception as e:
                     print(f"Błąd wczytywania niestandardowej ikony {icon_path}: {e}")
         
-        # Użyj domyślnej ikony
         icon = self.create_default_icon(icon_size, exe_name)
         self.icon_cache[exe_name] = icon
         return icon
@@ -108,11 +101,9 @@ class AppTracker:
             process = psutil.Process(pid)
             exe_name = process.name()
             
-            # Pobierz konfigurację aplikacji
             app_config = self.app_config.get(exe_name.lower(), {})
             name = app_config.get('name', exe_name)
             
-            # Jeśli nie ma nazwy, spróbuj z tytułu okna
             if name == exe_name:
                 window_title = win32gui.GetWindowText(window)
                 if window_title:
@@ -146,7 +137,6 @@ class AppTracker:
         top_apps = []
         
         for app_name, time_spent in sorted_apps[:n]:
-            # Znajdź exe_name dla tej aplikacji
             exe_name = None
             for exe, config in self.app_config.items():
                 if config.get('name') == app_name:

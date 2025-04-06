@@ -3,9 +3,6 @@ from PIL import Image, ImageTk, ImageDraw
 import os
 
 class CustomButton:
-    """
-    A custom rounded button with icon support for tkinter applications.
-    """
     def __init__(
         self,
         master,
@@ -18,20 +15,7 @@ class CustomButton:
         icon_size=(18, 18),
         command=None
     ):
-        """
-        Initialize a custom button.
-        
-        Args:
-            master: Parent tkinter widget
-            position: (x, y) tuple for button position
-            size: (width, height) tuple for button size
-            corner_radius: Radius for rounded corners
-            background_color: Button background color
-            parent_bg: Parent widget background color
-            icon_path: Path to the icon image
-            icon_size: (width, height) tuple for icon size
-            command: Function to execute when button is clicked
-        """
+
         self.master = master
         self.position = position
         self.size = size
@@ -45,8 +29,6 @@ class CustomButton:
         self._create_button()
         
     def _create_button(self):
-        """Create the button with background and icon"""
-        # Create the button background
         button_image = Image.new("RGBA", self.size, (0, 0, 0, 0))
         button_draw = ImageDraw.Draw(button_image)
         button_draw.rounded_rectangle(
@@ -56,7 +38,6 @@ class CustomButton:
         )
         self.button_img = ImageTk.PhotoImage(button_image)
         
-        # Create the button
         self.button = tk.Label(
             self.master,
             image=self.button_img,
@@ -69,7 +50,6 @@ class CustomButton:
         if self.command:
             self.button.bind("<Button-1>", lambda event: self.command())
         
-        # Load and add icon if provided
         if self.icon_path and os.path.exists(self.icon_path):
             icon = Image.open(self.icon_path).resize(self.icon_size)
             self.icon_img = ImageTk.PhotoImage(icon)

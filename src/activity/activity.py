@@ -25,7 +25,7 @@ class TopAppsWidget(tk.Label):
         self.title = title
         self.position = position
         self.labels = []
-        self.icons = []  # Lista do przechowywania referencji do ikon
+        self.icons = []
         self.update_interval = update_interval
         
         self.app_tracker = AppTracker(config_file="src/app_config.json")
@@ -76,9 +76,7 @@ class TopAppsWidget(tk.Label):
         self.title_label.place(x=18, y=6)
 
     def create_apps_list(self):
-        """Tworzy listę aplikacji z ikonami i zaokrąglonymi rogami"""
         for i, app in enumerate(self.top_apps):
-            # Tworzenie tła dla pojedynczej aplikacji
             img = Image.new("RGBA", (self.width-8, 23), (0, 0, 0, 0))
             draw = ImageDraw.Draw(img)
             draw.rounded_rectangle(
@@ -89,7 +87,6 @@ class TopAppsWidget(tk.Label):
             img_tk = ImageTk.PhotoImage(img)
             self.labels.append(img_tk)
 
-            # Tworzenie canvas dla pojedynczej aplikacji
             canvas = tk.Canvas(
                 self,
                 width=self.width-8,
@@ -100,19 +97,17 @@ class TopAppsWidget(tk.Label):
             )
             canvas.create_image(0, 0, image=img_tk, anchor="nw")
             
-            # Dodanie ikony aplikacji (jeśli istnieje)
             if "icon" in app and app["icon"]:
                 canvas.create_image(
-                    4, 11,  # Pozycja ikony (wyśrodkowana w pionie)
+                    4, 11,
                     image=app["icon"],
                     anchor="w"
                 )
-                self.icons.append(app["icon"])  # Zachowaj referencję
-                text_x = 25  # Przesunięcie tekstu jeśli jest ikona
+                self.icons.append(app["icon"])
+                text_x = 25
             else:
-                text_x = 4   # Brak ikony - tekst od lewej krawędzi
+                text_x = 4
             
-            # Dodanie nazwy aplikacji
             canvas.create_text(
                 text_x, 2,
                 text=app["name"], 
@@ -121,7 +116,6 @@ class TopAppsWidget(tk.Label):
                 anchor="nw"
             )
             
-            # Dodanie czasu
             canvas.create_text(
                 self.width-14, 22,
                 text=app["time"], 
@@ -138,5 +132,5 @@ class TopAppsWidget(tk.Label):
             if child not in [self.title_label]:
                 child.destroy()
         self.labels.clear()
-        self.icons.clear()  # Wyczyść cache ikon
+        self.icons.clear()
         self.create_apps_list()
